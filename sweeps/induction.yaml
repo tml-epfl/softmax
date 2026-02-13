@@ -1,0 +1,29 @@
+method: grid
+program: exp_induction.py
+parameters:
+    seed:
+        values: [0, 1, 2, 3, 4]
+    shift_query_token:
+        values: [true, false]
+
+    num_heads:
+        values: [1, 2, 4, 8]
+    attention_type:
+        values: ['softmax', 'uniform', 'sigmoid_norm', 'sigmoid_unnorm', 'linear', 'linear_unnorm', 'coupled_linear_norm', 'coupled_linear_unnorm', 'raw_dotproduct_norm', 'raw_dotproduct_unnorm', 'mlp_norm', 'mlp_unnorm']
+    positional_type:
+        values: ['concat', 'add', 'no']
+
+    lr:
+        values: [1e-2, 1e-3, 1e-4]
+    aux_loss_weight:
+        values: [0.0, 0.2]
+    
+
+project: softmax
+name: induction
+
+command:
+    - ${env}
+    - python
+    - ${program}
+    - ${args_no_hyphens}

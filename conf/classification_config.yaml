@@ -1,0 +1,28 @@
+# Dataset config
+num_train: 10000
+num_eval: 1000
+vocab_size: 41
+seq_length: 11
+seed: 0
+num_labels: 4
+
+# Model config
+embed_dim: 128
+num_layers: 2
+num_heads: 4
+mlp_ratio: 4.0
+use_mlp: true
+use_layernorm: true
+is_causal: false
+
+# Attention type
+attention_type: "softmax"
+positional_type: "no"
+
+# Training config
+batch_size: 256
+lr: 1e-3
+num_epochs: 10
+
+use_wandb: true
+wandb_name: null

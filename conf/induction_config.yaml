@@ -1,0 +1,29 @@
+# Dataset config
+num_train: 100000
+num_eval: 1000
+vocab_size: 50
+seq_length: 13
+shift_query_token: true
+seed: 0
+
+# Model config
+embed_dim: 128
+num_layers: 2
+num_heads: 4
+mlp_ratio: 4.0
+use_mlp: true
+use_layernorm: true
+is_causal: true
+
+# Attention type
+attention_type: "softmax"
+positional_type: "concat"
+
+# Training config
+batch_size: 256
+lr: 1e-3
+num_epochs: 10
+aux_loss_weight: 0.2
+
+use_wandb: true
+wandb_name: null

@@ -1,0 +1,32 @@
+method: grid
+program: exp_classification.py
+parameters:
+    seed:
+        values: [0, 1, 2, 3, 4]
+    vocab_size:
+        values: [41, 81, 161]
+
+    num_layers:
+        values: [1, 2]
+    num_heads:
+        values: [1, 2, 4]
+    use_mlp:
+        values: [true, false]
+    use_layernorm:
+        values: [true, false]
+
+    attention_type:
+        values: ['softmax', 'sigmoid_norm', 'sigmoid_unnorm', 'linear', 'linear_unnorm', 'coupled_linear_norm', 'coupled_linear_unnorm', 'raw_dotproduct_norm', 'raw_dotproduct_unnorm', 'mlp_norm', 'mlp_unnorm', 'uniform']
+
+    lr:
+        values: [1e-2, 1e-3, 1e-4]
+    
+
+project: softmax
+name: classification
+
+command:
+    - ${env}
+    - python
+    - ${program}
+    - ${args_no_hyphens}
