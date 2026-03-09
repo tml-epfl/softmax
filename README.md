@@ -1,5 +1,7 @@
 # Gradient Flow Polarizes Softmax Outputs towards Low-Entropy Solutions
 
+[Read the paper](https://arxiv.org/abs/2603.06248)
+
 <p align="center">
   <img src="data/attn_patterns.png" width="500">
 </p>
@@ -71,4 +73,13 @@ To reproduce the experiment **with LLMs**, do the following:
 
 ## Citation information
 
-TBD.
+If you find our work useful for your research, please cite it as
+
+```
+@article{varre2026gradient,
+  title={Gradient Flow Polarizes Softmax Outputs towards Low-Entropy Solutions},
+  author={Varre, Aditya and Rofin, Mark and Flammarion, Nicolas},
+  journal={arXiv preprint arXiv:2603.06248},
+  year={2026}
+}
+```
